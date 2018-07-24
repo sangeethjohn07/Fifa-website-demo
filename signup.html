@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+	<title>FIFA 2K18 RUSSIA</title>
+</head>
+
+<body background="https://i.stack.imgur.com/jGlzr.png"><center>
+	<h1><font color="brown" size="10"><u>SIGNUP</u></font></h1>
+<form method="post" action="1.php" name="signup">
+	<table>
+	
+	<tr>
+		<td><font size=5>First name</font></td>
+		<td><input type="text" placeholder="name" name="first name" value=""  required></td>
+	</tr>
+	<tr>
+		<td><font size=5>Last name</font></td>
+		<td><input type="text" placeholder="First name" name="last name" value="" required></td>
+	</tr>
+	<tr>
+		<td><font size=5>D.O.B </font></td>
+		<td><input type="date" placeholder="dob" name="dob" value=""></td>
+	</tr>
+	<tr>
+		<td><font size=5>Phone </font></td>
+		<td><input type="number" placeholder="phone" id="phone" value="" Onblur="ph()"></td>
+	</tr>
+	<tr>
+		<td><font size=5>Email</font></td>
+		<td><input type="email" placeholder="email" name="email" value=""></td>
+	</tr>
+	<tr>
+		<td><font size=5>Username</font></td>
+		<td><input type="text" placeholder="username" name="password" value=""></td>
+	</tr>
+	<tr>
+		<td><font size=5>Password</font></td>
+		<td><input type="password" placeholder="password" id="pa1" value=""></td>
+	</tr>
+	<tr>
+		<td><font size=5>Cofirm password</font></td>
+		<td><input type="password" placeholder="confirm password" id="pa2" value="" Onblur="pass()"></td>
+	</tr>
+	</table>
+	<button type="submit" Onsubmit="pass()">SIGNUP</button>
+</center>
+</form>
+</body>
+<script>
+	function ph()
+	{
+		var n=Number(document.getElementById("phone").value);
+		if(n<1000000000 || n>9999999999 )
+			alert("invalid number");
+		
+	}
+	function pass()
+	{
+		var p1=document.getElementById("pa1").value;
+		var p2=document.getElementById("pa2").value;
+		if(p1!=p2)
+			alert("password missmatch");
+	}
+
+</script>
+</html>
